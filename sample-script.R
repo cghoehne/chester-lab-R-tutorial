@@ -35,6 +35,8 @@ boxplot(mtcars$mpg~mtcars$cyl) # boxplots of mpg by number of cylinders
 
 
 # use ggplot2 (or tidyverse which contains ggplot2) for advanced plotting
+# use install.packages() like before
+
 library(ggplot2)
 
 my.plot <- ggplot(data = mtcars, aes(x = mpg, y = hp)) + 
