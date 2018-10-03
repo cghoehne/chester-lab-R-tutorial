@@ -8,6 +8,13 @@ View(mtcars) # another way to view data
 
 head(mtcars) # view the top of the data using 'head'
 
+class(mtcars) # check the class of the object mtcars
+
+class(mtcars$mpg) # class of the variable mpg
+
+lapply(mtcars, class) # the class of all variables
+
+
 
 install.packages("here") # install a non-default library/package
 
@@ -44,6 +51,8 @@ my.plot <- ggplot(data = mtcars, aes(x = mpg, y = hp)) +
   theme_minimal() +
   ggtitle("mpg vs hp")
 my.plot # print the plot
+
+class(my.plot)  # see the class of the plot object
 
 my.plot2 <- ggplot(data = mtcars, aes(x = mpg, y = hp)) + 
   geom_point() +
