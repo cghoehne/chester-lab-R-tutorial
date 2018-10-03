@@ -19,7 +19,7 @@ mtcars[1,] # view the first row
 mtcars[,1] # vieww the first column
 mtcars[1,1] # view the first data point (first row, first column)
 
-# you can subset data in multiple ways
+# you can subset data
 mtcars.mpg.over.25 <- subset(mtcars, mpg > 25)
 min(mtcars.mpg.over.25$mpg) # check it worked
 
@@ -43,6 +43,21 @@ i <- integer() # create an empty integer value
 for(i in 1:10){ # loop through a sequence and do arthemtic
   print(i / 2)
 }
+
+# you can create custom functions
+x <- "hello" # store some string info
+y <- "hola"
+
+f <- function(a, b) { # create the function
+  print(a)
+  print(b)
+}
+
+f(x,y) # use the function
+View(f) # view the function in the editor
+class(f) # it is class 'function
+
+# 
 
 
 # install a non-default library/package (in this case 'here')
@@ -69,8 +84,11 @@ mtcars[,1]
 mtcars2[,1]
 
 # you can also check if they are equal
-mtcars[,1] == mtcars2[,1]
+mtcars[,1] == mtcars2[,1] 
 # this outputs a vector of logicals
+# note that you use a 'double equals' to for an equal sign in an equation
+# not equals is "!="
+mtcars[,1] != mtcars2[,1] 
 
 # to fix this issue, we must load the file with the argument row.names = TRUE
 # look at the documentation for read.csv to see how to do this
